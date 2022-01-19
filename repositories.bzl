@@ -40,9 +40,16 @@ def go_repositories():
     go_repository(
         name = "com_github_golang_protobuf",
         importpath = "github.com/golang/protobuf",
-        sum = "h1:6nsPYzhq5kReh6QImI3k5qWzO4PEbvbIW2cwSfR/6xs=",
-        version = "v1.3.2",
+        sum = "h1:ROPKBNFfQgOUMifHyP+KYbvpjbdoFNs+aK7DXlji0Tw=",
+        version = "v1.5.2",
     )
+    go_repository(
+        name = "org_golang_google_protobuf",
+        importpath = "google.golang.org/protobuf",
+        sum = "h1:Ejskq+SyPohKW+1uil0JJMtmHCgJPJ/qWTxr8qp+R4c=",
+        version = "v1.25.0",
+    )
+
 
     go_repository(
         name = "com_github_rogpeppe_fastuuid",
@@ -77,15 +84,19 @@ def go_repositories():
     )
     go_repository(
         name = "org_golang_google_genproto",
+        build_file_proto_mode = "disable_global",
         importpath = "google.golang.org/genproto",
-        sum = "h1:hrpEMCZ2O7DR5gC1n2AJGVhrwiEjOi35+jxtIuZpTMo=",
-        version = "v0.0.0-20190927181202-20e1ac93f88c",
+        sha256 = "f5f5ebb504e2f9fd46c8c8f445e83c63de386cbc31cb644202b2226b59794b16",
+        strip_prefix = "google.golang.org/genproto@v0.0.0-20210909211513-a8c4777a87af",
+        urls = [
+            "https://storage.googleapis.com/cockroach-godeps/gomod/google.golang.org/genproto/org_golang_google_genproto-v0.0.0-20210909211513-a8c4777a87af.zip",
+        ],
     )
     go_repository(
         name = "org_golang_google_grpc",
         importpath = "google.golang.org/grpc",
-        sum = "h1:vb/1TCsVn3DcJlQ0Gs1yB1pKI6Do2/QNwxdKqmc/b0s=",
-        version = "v1.24.0",
+        sum = "h1:Eeu7bZtDZ2DpRCsLhUlcrLnvYaMK1Gz86a+hMVvELmM=",
+        version = "v1.43.0",
     )
     go_repository(
         name = "org_golang_x_lint",

@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	pb "github.com/therealwardo/grpc-gateway/examples/examplepb"
-	"github.com/therealwardo/grpc-gateway/runtime"
-	"github.com/therealwardo/grpc-gateway/runtime/internal"
+	pb "github.com/grpc-ecosystem/grpc-gateway/examples/examplepb"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime/internal"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -137,7 +137,7 @@ func (c *CustomMarshaler) Marshal(v interface{}) ([]byte, error)      { return c
 func (c *CustomMarshaler) Unmarshal(data []byte, v interface{}) error { return c.m.Unmarshal(data, v) }
 func (c *CustomMarshaler) NewDecoder(r io.Reader) runtime.Decoder     { return c.m.NewDecoder(r) }
 func (c *CustomMarshaler) NewEncoder(w io.Writer) runtime.Encoder     { return c.m.NewEncoder(w) }
-func (c *CustomMarshaler) ContentType() string                        { return c.m.ContentType() }
+func (c *CustomMarshaler) ContentType(v interface{}) string           { return c.m.ContentType(v) }
 
 func TestForwardResponseStreamCustomMarshaler(t *testing.T) {
 	type msg struct {
