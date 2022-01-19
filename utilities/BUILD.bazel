@@ -7,12 +7,12 @@ go_library(
         "pattern.go",
         "trie.go",
     ],
-    importpath = "github.com/therealwardo/grpc-gateway/utilities",
+    importpath = "github.com/grpc-ecosystem/grpc-gateway/utilities",
     visibility = ["//visibility:public"],
 )
 
 go_test(
     name = "go_default_test",
     srcs = ["trie_test.go"],
-    embed = [":go_default_library"],
+    deps = [":go_default_library"],
 )
