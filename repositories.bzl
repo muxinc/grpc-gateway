@@ -144,8 +144,8 @@ def go_repositories():
     go_repository(
         name = "com_github_google_go_cmp",
         importpath = "github.com/google/go-cmp",
-        sum = "h1:+dTQ8DZQJz0Mb/HjFlkptS1FeQ4cWSnN941F8aEG4SQ=",
-        version = "v0.2.0",
+        sum = "h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=",
+        version = "v0.5.5",
     )
     go_repository(
         name = "org_golang_x_crypto",
